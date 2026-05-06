@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { color-scheme: light; }
+
+  html, body {
+    background: theme('colors.paper.DEFAULT');
+    color: theme('colors.ink.DEFAULT');
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: theme('fontFamily.sans');
+    font-feature-settings: "ss01", "cv11", "ss02";
+    overflow-x: hidden;
+    cursor: none;
+  }
+  ::selection { background: theme('colors.ink.DEFAULT'); color: theme('colors.paper.light'); }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* Subtle paper grain — adds tactile warmth */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none; z-index: 1;
+    background-image:
+      radial-gradient(rgba(26,20,16,0.035) 1px, transparent 1.4px);
+    background-size: 3px 3px;
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+  }
+}
+
+@layer components {
+  .gutter      { padding-left: clamp(20px, 4vw, 64px); padding-right: clamp(20px, 4vw, 64px); }
+  .pagewrap    { max-width: theme('maxWidth.page'); margin-inline: auto; }
+
+  .display     { font-family: theme('fontFamily.display'); font-weight: 400; line-height: 0.86; }
+  .ed          { font-family: theme('fontFamily.edisplay'); font-weight: 700; line-height: 0.92; font-variation-settings: "opsz" 144, "SOFT" 30; }
+  .ed-it       { font-family: theme('fontFamily.edisplay'); font-weight: 700; font-style: italic; line-height: 0.95; font-variation-settings: "opsz" 144, "SOFT" 50; }
+  .ed-serif    { font-family: theme('fontFamily.serif'); }
+  .mono        { font-family: theme('fontFamily.mono'); }
+
+  /* "squish" — apply only to single-line monumental words */
+  .squish {
+    transform: scale(0.96, 1.4);
+    transform-origin: center;
+    -webkit-text-stroke: 2px currentColor;
+    paint-order: stroke fill;
+  }
+
+  .rule        { height: 1px; width: 100%; background: rgba(26,20,16,0.18); }
+  .hairline    { border-top: 1px solid rgba(26,20,16,0.18); }
+  .hairline-b  { border-bottom: 1px solid rgba(26,20,16,0.18); }
+  .hairline-l  { border-left: 1px solid rgba(26,20,16,0.18); }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: theme('fontFamily.mono');
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: theme('colors.ink.mute');
+  }
+  .eyebrow::before {
+    content: ""; width: 26px; height: 1px; background: currentColor; display: inline-block;
+  }
+
+  .num-tag {
+    font-family: theme('fontFamily.mono');
+    font-size: 12px; letter-spacing: 0.06em;
+    color: theme('colors.ink.mute');
+  }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 14px 22px;
+    border: 1px solid theme('colors.ink.DEFAULT');
+    border-radius: 999px;
+    font-size: 14px; letter-spacing: 0.02em;
+    transition: background-color .35s theme('transitionTimingFunction.out'),
+                color .35s theme('transitionTimingFunction.out');
+  }
+  .pill:hover { background: theme('colors.ink.DEFAULT'); color: theme('colors.paper.light'); }
+
+  .accent-bar {
+    display: inline-block;
+    width: 42px; height: 3px; border-radius: 2px;
+    background: theme('colors.clay.DEFAULT');
+  }
+
+  .arrow-link {
+    position: relative; display: inline-flex; align-items: center; gap: 14px;
+    transition: gap .35s theme('transitionTimingFunction.out');
+  }
+  .arrow-link:hover { gap: 22px; }
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); }
+}
+.animate-marquee { animation: marquee 50s linear infinite; }
+
+@keyframes marquee-slow {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); }
+}
+.animate-marquee-slow { animation: marquee-slow 90s linear infinite; }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s theme('transitionTimingFunction.out'), transform .9s theme('transitionTimingFunction.out'); }
+.reveal.in { opacity: 1; transform: none; }
