@@ -14,11 +14,6 @@ export default function Work() {
   return (
     <section id="work" className="gutter bg-paper py-32 md:py-44">
       <div className="pagewrap">
-        <div className="mb-14 flex items-end justify-between gap-6">
-          <span className="num-tag">N°02 — Work</span>
-          <span className="num-tag">2015 → present</span>
-        </div>
-
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,9 +33,8 @@ export default function Work() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ duration: 0.5, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
-              className="hairline-b group grid grid-cols-[42px_110px_1fr_auto] items-baseline gap-8 py-6 md:py-8 transition-[padding] duration-500 ease-out hover:pl-3"
+              className="hairline-b group grid grid-cols-[110px_1fr_auto] items-baseline gap-8 py-6 md:py-8 transition-[padding] duration-500 ease-out hover:pl-3"
             >
-              <span className="num-tag">{it.n}</span>
               <span className="mono text-[12px] tracking-[0.06em] text-ink-mute">{it.year}</span>
               <h3
                 className="ed text-ink transition-colors duration-300 group-hover:text-clay"

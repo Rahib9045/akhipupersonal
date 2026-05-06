@@ -5,8 +5,6 @@ export default function Contact() {
   return (
     <section id="contact" className="gutter bg-paper py-32 md:py-56">
       <div className="pagewrap">
-        <span className="num-tag">N°04 — Contact</span>
-
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +31,6 @@ export default function Contact() {
               href="mailto:iamayeshamarzana@gmail.com"
               className="pill arrow-link mt-12"
             >
-              <span className="mono text-[12px] uppercase tracking-[0.18em]">Inquiries</span>
               <span className="text-[15px]">iamayeshamarzana@gmail.com</span>
               <span aria-hidden>→</span>
             </a>
@@ -41,14 +38,12 @@ export default function Contact() {
           <div className="md:col-span-5">
             <ul className="space-y-0">
               {[
-                ["Instagram",  "@ayeshamarzana"],
-                ["Phone",      "+880 1998 061 861"],
-                ["Press kit",  "Available on request"],
-                ["Based",      "Dhaka · Kuala Lumpur"],
-              ].map(([k, v]) => (
-                <li key={k} className="hairline-b flex justify-between py-4">
-                  <span className="num-tag">{k}</span>
-                  <span className="ed-serif italic text-[18px] text-ink">{v}</span>
+                "@ayeshamarzana",
+                "+880 1998 061 861",
+                "Dhaka · Kuala Lumpur",
+              ].map((v) => (
+                <li key={v} className="hairline-b py-4 ed-serif italic text-[20px] text-ink">
+                  {v}
                 </li>
               ))}
             </ul>

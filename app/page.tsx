@@ -36,12 +36,6 @@ export default function Page() {
               className="h-full w-full object-cover"
               style={{ objectPosition: "center 20%" }}
             />
-            <span
-              className="absolute top-4 left-5 mono text-[10px] uppercase tracking-[0.22em] mix-blend-difference"
-              style={{ color: "#FAF4E6" }}
-            >
-              fig. 01 — A.M.
-            </span>
           </figure>
         </div>
 

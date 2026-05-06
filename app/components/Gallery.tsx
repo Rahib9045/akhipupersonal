@@ -14,10 +14,6 @@ export default function Gallery() {
   return (
     <section id="gallery" className="gutter bg-paper py-32 md:py-44">
       <div className="pagewrap">
-        <div className="mb-14 flex items-end justify-between gap-6">
-          <span className="num-tag">N°03 — Gallery</span>
-          <span className="num-tag">Recent · 2024 → 2026</span>
-        </div>
         <motion.h2
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,16 +38,10 @@ export default function Gallery() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.src}
-                alt={p.caption}
+                alt=""
                 className="h-full w-full object-cover transition-transform duration-[900ms] ease-out hover:scale-[1.05]"
                 style={{ objectPosition: p.pos }}
               />
-              <figcaption
-                className="absolute bottom-3 left-4 mono text-[10px] uppercase tracking-[0.18em] mix-blend-difference"
-                style={{ color: "#FAF4E6" }}
-              >
-                {p.caption}
-              </figcaption>
             </motion.figure>
           ))}
         </div>

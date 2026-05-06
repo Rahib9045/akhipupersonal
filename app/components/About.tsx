@@ -8,9 +8,8 @@ export default function About() {
         <div className="grid gap-12 md:grid-cols-12">
           {/* Left rail */}
           <div className="md:col-span-3 md:sticky md:top-28 self-start">
-            <span className="num-tag">N°01 — About</span>
             <h2
-              className="ed mt-6 text-ink"
+              className="ed text-ink"
               style={{ fontSize: "clamp(44px, 6vw, 96px)", lineHeight: 0.92, letterSpacing: "-0.02em" }}
             >
               A study<br/>in <em className="ed-it text-clay">presence</em>.
@@ -48,19 +47,6 @@ export default function About() {
               </p>
             </div>
 
-            <dl className="mt-16 grid gap-px md:grid-cols-4 hairline">
-              {[
-                ["Currently", "JD World · KL"],
-                ["Based in",  "Dhaka · KL"],
-                ["Trained",   "ULAB · MSJ ’25"],
-                ["Languages", "Bengali · English"],
-              ].map(([k, v]) => (
-                <div key={k} className="hairline-b py-5">
-                  <dt className="num-tag">{k}</dt>
-                  <dd className="ed-serif italic text-ink text-[20px] mt-1">{v}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
         </div>
       </div>
