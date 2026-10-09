@@ -31,7 +31,7 @@ export default function Nav() {
             onClick={() => setOpen(false)}
             className="ed-serif italic text-[18px] tracking-tight"
           >
-            ayesha<span className="not-italic">·</span>marzana
+            ayesha<span className="not-italic">·</span>akondo
           </Link>
 
           {/* Desktop links */}

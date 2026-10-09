@@ -5,15 +5,22 @@ import SmoothScroll from "./components/SmoothScroll";
 import Nav from "./components/Nav";
 
 export const metadata: Metadata = {
-  title: "Ayesha · Akondo Akhi",
+  title: "Ayesha Akondo",
   description:
-    "Ayesha Akondo Akhi — media, public relations, brand ambassador, and editorial work between Dhaka and Kuala Lumpur.",
+    "Ayesha Akondo — media, public relations, brand ambassador, and editorial work between Dhaka and Kuala Lumpur.",
   metadataBase: new URL("https://ayeasha-akondo-akhi-ybqm.onrender.com"),
   openGraph: {
-    title: "Ayesha · Akondo Akhi",
+    title: "Ayesha Akondo",
+    siteName: "Ayesha Akondo",
     description: "Media · PR · Brand Ambassador · Editorial",
     images: ["/images/hero.jpg"],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ayesha Akondo",
+    description: "Media · PR · Brand Ambassador · Editorial",
+    images: ["/images/hero.jpg"],
   },
 };
 

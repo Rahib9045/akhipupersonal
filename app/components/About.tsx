@@ -5,49 +5,48 @@ export default function About() {
   return (
     <section id="about" className="gutter bg-paper py-32 md:py-44">
       <div className="pagewrap">
-        <div className="grid gap-12 md:grid-cols-12">
-          {/* Left rail */}
-          <div className="md:col-span-3 md:sticky md:top-28 self-start">
-            <h2
-              className="ed text-ink"
-              style={{ fontSize: "clamp(44px, 6vw, 96px)", lineHeight: 0.92, letterSpacing: "-0.02em" }}
-            >
-              A study<br/>in <em className="ed-it text-clay">presence</em>.
-            </h2>
-            <span className="accent-bar mt-8" />
-          </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-15% 0px" }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="ed text-ink"
+          style={{
+            fontSize: "clamp(54px, 8vw, 132px)",
+            lineHeight: 0.95,
+            letterSpacing: "-0.025em",
+          }}
+        >
+          A study in <em className="ed-it text-clay">presence</em>.
+        </motion.h2>
 
-          {/* Body */}
-          <div className="md:col-span-9 md:col-start-4">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-15% 0px" }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="ed-serif text-ink text-[clamp(22px,2.4vw,34px)] leading-[1.35] tracking-tightish max-w-[26ch]"
-            >
-              Ayesha is a Bangladeshi media &amp; public relations professional working
-              between <em>Dhaka</em> and <em>Kuala Lumpur</em>, with a foot in
-              brand storytelling, theatre, and editorial.
-            </motion.p>
-
-            <div className="mt-14 grid gap-10 md:grid-cols-2 text-[16px] leading-[1.65] text-ink-soft">
-              <p>
-                Trained at the University of Liberal Arts Bangladesh with a degree
-                in Media Studies &amp; Journalism (major: Public Relations), her
-                practice spans brand ambassadorship for HATIL and Singer Bangladesh,
-                hospitality PR for Golden Tulip — The GrandMark, and creative
-                content for Aesthetic Hub.
-              </p>
-              <p>
-                Currently leading media and public relations for JD World in Kuala
-                Lumpur, she splits her time between client communications, on-camera
-                work, and theatre — most recently training under Sayed Jamil Ahmed
-                in scenography and direction.
-              </p>
-            </div>
-
-          </div>
+        <div className="mt-16 md:mt-24 grid gap-10 md:grid-cols-3 text-[16px] leading-[1.7] text-ink-soft">
+          <p>
+            Trained at the <em>University of Liberal Arts Bangladesh</em> in
+            Media Studies &amp; Journalism with a major in Public Relations, she
+            built her journey at the intersection of communication, creativity,
+            and performance. During her academic years, she represented renowned
+            brands such as <span className="text-ink font-medium">HATIL</span>{" "}
+            and <span className="text-ink font-medium">Singer Bangladesh</span>{" "}
+            as a brand ambassador, where she developed a strong presence in
+            public engagement and promotional communication.
+          </p>
+          <p>
+            Her professional experience further expanded through her
+            multitasking role as a{" "}
+            <span className="text-ink font-medium">PR Team Member</span> at{" "}
+            <em>Golden Tulip Grandmark Dhaka</em>, where she worked closely with
+            international guests and corporate communications, blending
+            hospitality with strategic public relations.
+          </p>
+          <p>
+            Driven by a deep passion for theatre and visual storytelling, she
+            also pursued acting and scenography training under the guidance of
+            renowned theatre personality <em>Syed Jamil Ahmed</em>. Her artistic
+            journey reflects a unique fusion of media, performance, and human
+            connection — shaping her into a dynamic communicator with both
+            creative vision and professional versatility.
+          </p>
         </div>
       </div>
     </section>

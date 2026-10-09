@@ -1,6 +1,6 @@
-# Ayesha · Marzana
+# Ayesha · Akondo
 
-Personal site for Ayesha Akondo Akhi (media name: Ayesha Marzana) — media, public relations, and editorial work between Dhaka and Kuala Lumpur.
+Personal site for Ayesha Akondo Akhi (media name: Ayesha Akondo) — media, public relations, and editorial work between Dhaka and Kuala Lumpur.
 
 ## Stack
 

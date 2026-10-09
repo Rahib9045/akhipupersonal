@@ -32,7 +32,7 @@ export default function Page() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/hero.jpg"
-              alt="Portrait of Ayesha Marzana"
+              alt="Portrait of Ayesha Akondo"
               className="h-full w-full object-cover"
               style={{ objectPosition: "center 20%" }}
             />
